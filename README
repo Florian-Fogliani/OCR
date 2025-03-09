@@ -1,0 +1,43 @@
+Solver:
+Exécution :./solver <path>
+avec ./solver le fichier executable et 
+<path> : le chemin d'acces vers le fichier texte contenant la grille
+
+attention si votre fichier texte n'a pas le bon format une erreur se produira
+
+le format adéquate est :
+XXX XXX XXX
+XXX XXX XXX
+XXX XXX XXX
+
+XXX XXX XXX
+XXX XXX XXX
+XXX XXX XXX
+
+XXX XXX XXX
+XXX XXX XXX
+XXX XXX XXX
+
+avec X={1,2,3,4,5,6,7,8,9,.}
+
+UI:
+avec ./ui
+
+Pre-traitement:
+Exécution: ./pret <path> <angle>
+<path> : le chemin d'acces vers l'image 
+<angle> : l'angle de rotation (mettez 0 si vous ne voulez pas faire de rotation)
+
+Cutter :
+Exécution: <file_to_analyze> <file_to_cut>
+
+Clean : Permet de clean les fichiers generees par cutter
+
+Process:
+Execution: ./process <nb1> <nb2> <nb3> <nb4>
+process va entrainer un reseau a sortir la bonne valeure pour une entre donnee:
+0 -> nb1
+1 -> nb2
+1 -> nb3
+0 -> nb4
+
