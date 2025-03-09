@@ -4,20 +4,20 @@ CC=gcc
 CFLAGS = -Wall -Wextra $(shell pkg-config --cflags sdl2 SDL2_image) -lm
 LDLIBS = $(shell pkg-config --libs sdl2 SDL2_image) -lm
 
-SRC= solver.c draw.c
+SRC= src/solver.c src/draw.c
 OBJ= ${SRC:.c=.o}
 DEP= ${SRC:.c=.d}
 
 
-SRC2= pret_orient.c pret_tocut.c pret_analyse.c pret.c
+SRC2= src/pret_orient.c src/pret_tocut.c src/pret_analyse.c src/pret.c
 OBJ2=${SRC2:.c=.o}
 EXE2=${SRC2:.c=}
 
-SRC3= cutter.c hough.c
-OBJ3= cutter.o hough.o
+SRC3= src/cutter.c src/hough.c
+OBJ3= src/cutter.o src/hough.o
 
-SRC4= process.c src/*.c
-OBJ4= process.o file.o network.o training.o useful_maths.o
+SRC4= src/process.c src/*.c
+OBJ4= src/process.o src/file.o src/network.o src/training.o src/useful_maths.o
 
 
 all:solver pret process cutter

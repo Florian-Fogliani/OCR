@@ -676,8 +676,9 @@ struct global
 #            define SKIP_UNSAFE 2 /* Chunks not safe to copy */
 #            define SKIP_UNUSED 3 /* Chunks not used by libpng */
 #            define SKIP_TRANSFORM 4 /* Chunks only used in transforms */
-#            define SKIP_COLOR 5 /* Everything but tRNS, sBIT, gAMA and sRGB   \
-                                  */
+#            define SKIP_COLOR                                                 \
+                5 /* Everything but tRNS, sBIT, gAMA and sRGB                  \
+                   */
 #            define SKIP_ALL 6 /* Everything but tRNS and sBIT */
 
     png_uint_32 idat_max; /* 0 to perform no re-chunking */
@@ -685,14 +686,16 @@ struct global
     int status_code; /* Accumulated status code */
 #            define TOO_FAR_BACK 0x01 /* found a too-far-back error */
 #            define CRC_ERROR 0x02 /* fixed an invalid CRC */
-#            define STREAM_ERROR 0x04 /* damaged PNG stream (may be fixable)   \
-                                       */
+#            define STREAM_ERROR                                               \
+                0x04 /* damaged PNG stream (may be fixable)                    \
+                      */
 #            define TRUNCATED 0x08 /* truncated but still readable */
 #            define FILE_ERROR 0x10 /* could not read the file */
 #            define WRITE_ERROR                                                \
                 0x20 /* write error (this terminates the read) */
-#            define INTERNAL_ERROR 0x40 /* internal limits/errors encountered  \
-                                         */
+#            define INTERNAL_ERROR                                             \
+                0x40 /* internal limits/errors encountered                     \
+                      */
 
     /* PUBLIC GLOBAL VARIABLES: USED INTERNALLY BY IDAT READ CODE */
     struct IDAT_list idat_cache; /* Cache of file IDAT information buffers */

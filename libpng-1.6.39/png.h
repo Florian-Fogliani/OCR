@@ -704,8 +704,9 @@ extern "C"
 /* These are for the pCAL chunk.  These values should NOT be changed. */
 #    define PNG_EQUATION_LINEAR 0 /* Linear transformation */
 #    define PNG_EQUATION_BASE_E 1 /* Exponential base e transform */
-#    define PNG_EQUATION_ARBITRARY 2 /* Arbitrary base exponential transform   \
-                                      */
+#    define PNG_EQUATION_ARBITRARY                                             \
+        2 /* Arbitrary base exponential transform                              \
+           */
 #    define PNG_EQUATION_HYPERBOLIC 3 /* Hyperbolic sine transformation */
 #    define PNG_EQUATION_LAST 4 /* Not a valid value */
 
@@ -1830,8 +1831,9 @@ extern "C"
 #    define PNG_FREE_TEXT 0x4000U
 #    define PNG_FREE_EXIF 0x8000U /* Added at libpng-1.6.31 */
 #    define PNG_FREE_ALL 0xffffU
-#    define PNG_FREE_MUL 0x4220U /* PNG_FREE_SPLT|PNG_FREE_TEXT|PNG_FREE_UNKN  \
-                                  */
+#    define PNG_FREE_MUL                                                       \
+        0x4220U /* PNG_FREE_SPLT|PNG_FREE_TEXT|PNG_FREE_UNKN                   \
+                 */
 
 #    ifdef PNG_USER_MEM_SUPPORTED
     PNG_EXPORTA(100, png_voidp, png_malloc_default,
@@ -2551,8 +2553,9 @@ PNG_EXPORTA(104, void, png_err, (png_const_structrp png_ptr), PNG_NORETURN);
 #        define PNG_IO_CHUNK_DATA 0x0040 /* currently at the chunk data */
 #        define PNG_IO_CHUNK_CRC 0x0080 /* currently at the chunk crc */
 #        define PNG_IO_MASK_OP 0x000f /* current operation: reading/writing */
-#        define PNG_IO_MASK_LOC 0x00f0 /* current location: sig/hdr/data/crc   \
-                                        */
+#        define PNG_IO_MASK_LOC                                                \
+            0x00f0 /* current location: sig/hdr/data/crc                       \
+                    */
 #    endif /* IO_STATE */
 
 /* Interlace support.  The following macros are always defined so that if
@@ -2928,8 +2931,9 @@ PNG_EXPORTA(104, void, png_err, (png_const_structrp png_ptr), PNG_NORETURN);
 #        define PNG_FORMAT_FLAG_COLOR                                          \
             0x02U /* color format: otherwise grayscale */
 #        define PNG_FORMAT_FLAG_LINEAR 0x04U /* 2-byte channels else 1-byte */
-#        define PNG_FORMAT_FLAG_COLORMAP 0x08U /* image data is color-mapped   \
-                                                */
+#        define PNG_FORMAT_FLAG_COLORMAP                                       \
+            0x08U /* image data is color-mapped                                \
+                   */
 
 #        ifdef PNG_FORMAT_BGR_SUPPORTED
 #            define PNG_FORMAT_FLAG_BGR                                        \
@@ -2937,8 +2941,9 @@ PNG_EXPORTA(104, void, png_err, (png_const_structrp png_ptr), PNG_NORETURN);
 #        endif
 
 #        ifdef PNG_FORMAT_AFIRST_SUPPORTED
-#            define PNG_FORMAT_FLAG_AFIRST 0x20U /* alpha channel comes first  \
-                                                  */
+#            define PNG_FORMAT_FLAG_AFIRST                                     \
+                0x20U /* alpha channel comes first                             \
+                       */
 #        endif
 
 #        define PNG_FORMAT_FLAG_ASSOCIATED_ALPHA                               \

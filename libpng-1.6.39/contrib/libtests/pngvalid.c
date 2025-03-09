@@ -3769,8 +3769,9 @@ static unsigned int bit_size(png_const_structp pp, png_byte colour_type,
 
 #    define TRANSFORM_WIDTH 128U
 #    define TRANSFORM_ROWMAX (TRANSFORM_WIDTH * 8U)
-#    define SIZE_ROWMAX (16 * 8U) /* 16 pixels, max 8 bytes each - 128 bytes   \
-                                   */
+#    define SIZE_ROWMAX                                                        \
+        (16 * 8U) /* 16 pixels, max 8 bytes each - 128 bytes                   \
+                   */
 #    define STANDARD_ROWMAX TRANSFORM_ROWMAX /* The larger of the two */
 #    define SIZE_HEIGHTMAX 16 /* Maximum range of size images */
 

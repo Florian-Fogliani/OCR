@@ -1265,8 +1265,9 @@ void PNGAPI png_read_png(png_structrp png_ptr, png_inforp info_ptr,
 /* Encoding of PNG data (used by the color-map code) */
 #        define P_NOTSET 0 /* File encoding not yet known */
 #        define P_sRGB 1 /* 8-bit encoded to sRGB gamma */
-#        define P_LINEAR 2 /* 16-bit linear: not encoded, NOT pre-multiplied!  \
-                            */
+#        define P_LINEAR                                                       \
+            2 /* 16-bit linear: not encoded, NOT pre-multiplied!               \
+               */
 #        define P_FILE 3 /* 8-bit encoded to file gamma, not sRGB or linear */
 #        define P_LINEAR8 4 /* 8-bit linear: only from a file value */
 
